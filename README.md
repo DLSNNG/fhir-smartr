@@ -27,7 +27,7 @@ import { SmartRead } from 'fhir-smartr'
 class PatientResource extends Component {
   
   render() {
-    // The results of your Smart query will be passed as a resource to this component
+    // The results of your Smart query will be passed as the resource prop to this component
     const patient = this.props.resource;
     const name = patient.name[0];
     const address = patient.address[0];
