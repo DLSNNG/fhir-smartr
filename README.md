@@ -43,7 +43,7 @@ class PatientResource extends Component {
 class App extends Component {
   render() {
     return (
-      // SmartRead wraps the resource and passes the query results to it's children
+      // SmartRead allows you to define a query, and then passes the results of that query (as the resource prop) to it's children
       <SmartRead query={{ type: 'Patient' id: 'some-id'}}>
         <PatientResource />
       </SmartRead>
