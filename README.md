@@ -17,8 +17,8 @@ npm install --save fhir-smartr
 <script type="text/javascript" src="https://unpkg.com/fhir-smartr@1.0.0/umd/fhir-smartr.js"></script>
 ```
 
-##Usage
-###Reading a specific resource
+## Usage
+### Reading a specific resource
 ```javascript
 import React, { Component } from 'react';
 import { SmartRead } from 'fhir-smartr'
