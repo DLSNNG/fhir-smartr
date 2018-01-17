@@ -52,7 +52,7 @@ class App extends Component {
   }
 }
 
-ReactDOM.render(<PatientResource id="some-string" />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
 ```
 
 [build-badge]: https://img.shields.io/travis/user/repo/master.png?style=flat-square
