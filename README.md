@@ -79,9 +79,7 @@ class App extends Component {
       // SmartSearch allows you to define a query
       // The results of that query are then passed to its children as props.results
       <SmartSearch query={{ type: 'Patient' }}>
-        // Resource list loops through props.results
-        // and renders a clone of its children for each result,
-        // passing in result.resource as child.props.resource
+        // ResourceList maps props.results to a list of its child components 
         <ResourceList>
           <PatientResource />
         </ResourceList>
