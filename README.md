@@ -5,7 +5,7 @@
 [![Coveralls][coveralls-badge]][coveralls]
 
 # SMART on FHIR Components for React
-Example on Plunker: [https://plnkr.co/edit/O2NktwMJpeUuxyUp0a6E](https://plnkr.co/edit/O2NktwMJpeUuxyUp0a6E?p=preview)
+Example on Plunker: [https://plnkr.co/edit/YYdAIdKY2VW9UbF6GT0X](https://plnkr.co/edit/YYdAIdKY2VW9UbF6GT0X?p=preview)
 
 See also [fhir-smartr-redux](https://github.com/DLSNNG/fhir-smartr-redux) for modified implementation using Redux.
 
