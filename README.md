@@ -7,7 +7,7 @@
 # SMART on FHIR Components for React
 
 ## Installation
-### NPM
+### Node
 ```
 npm install --save fhir-smartr
 ```
@@ -18,7 +18,7 @@ npm install --save fhir-smartr
 ```
 
 ## Reading a specific resource
-### NPM
+### Node
 ```javascript
 import React, { Component } from 'react';
 import { SmartRead } from 'fhir-smartr'
@@ -123,7 +123,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 ```
 
 ## Searching for Resources
-### NPM
+### Node
 ```javascript
 import React, { Component } from 'react';
 import { SmartSearch, ResourceList } from 'fhir-smartr'
