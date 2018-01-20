@@ -5,6 +5,8 @@
 [![Coveralls][coveralls-badge]][coveralls]
 
 # SMART on FHIR Components for React
+Example on Plunker: [https://plnkr.co/edit/O2NktwMJpeUuxyUp0a6E](https://plnkr.co/edit/O2NktwMJpeUuxyUp0a6E?p=preview)
+See also [fhir-smartr-redux](https://github.com/DLSNNG/fhir-smartr-redux) for modified implementation using Redux.
 
 ## Installation
 ### Node
@@ -21,7 +23,7 @@ npm install --save fhir-smartr
   <script src="https://unpkg.com/react/umd/react.production.min.js"></script>
   <script src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"></script>
   <!-- Load fhir-smartr -->
-  <script type="text/javascript" src="https://unpkg.com/fhir-smartr/umd/fhir-smartr.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/fhir-smartr/umd/fhir-smartr.min.js"></script>
 </head>
 ```
 

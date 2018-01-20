@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {render} from 'react-dom'
-import {TestRead} from 'fhir-smartr'
+import {TestRead} from '../../src'
 
 class PatientResource extends Component {
   
