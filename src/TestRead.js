@@ -1,33 +1,38 @@
 /*global FHIR*/
 
 import React, { Component } from 'react';
-import LoadingSpinner from './LoadingSpinner.js';
+import LoadingSpinner from './LoadingSpinner';
 
-class SmartRead extends Component {
+class TestRead extends Component {
     
   constructor(props) {
     super(props);
     this.updateResults = this.updateResults.bind(this);
+    this.setState = this.setState.bind(this);
+    this.handleQuery = this.handleQuery.bind(this);
     this.state = {
       ready: false,
       api: false,
-      resource: false,
+      results: [],
     }
   }
   
   componentWillMount() {
-    const self = this;
-    FHIR.oauth2.ready(function(smart) {
-      console.log("Oauth ready");
-      console.log(smart);
-      console.log(self);
-      self.setState({ ready: true, api: smart.api });
-      self.handleQuery(self.props);
+    let smart = FHIR.client({
+      serviceUrl: 'https://sb-fhir-dstu2.smarthealthit.org/api/smartdstu2/open',
+      patientId: 'SMART-1137192'
     });
+    console.log(smart);
+    this.setState({ ready: true, api: smart.api });
+  }
+  
+  componentDidMount() {
+    const props = this.props;
+    this.handleQuery(props);
   }
   
   componentWillUpdate(nextProps, nextState) {
-    console.log("componentWillUpdate");
+    console.log("component updating");
     if(this.props.query !== nextProps.query) {
       this.setState({ ready: false });  
       this.handleQuery(nextProps);
@@ -35,29 +40,28 @@ class SmartRead extends Component {
   }
   
   updateResults(results) {
-    console.log("updateResults");
     console.log(results);
     const resource = results.data ? results.data : false;
     this.setState({ resource: resource, ready: true });
   }
   
   handleQuery(props) {
-    console.log("handleQuery");
     const query = props.query;
-    console.log(this.state);
+    console.log(props);
     if(query) {
         this.state.api.read(query).done(this.updateResults);
     }
     else {
       this.setState({
-        ready: true
+        ready: true,
+        results: []
       })
     }
   }
   
   render() {
     console.log('smart read');
-    if(this.state.ready && this.state.resource) {
+    if(this.state.ready) {
       return (
         <div>{React.cloneElement(this.props.children, { resource: this.state.resource })}</div>
       );
@@ -68,4 +72,4 @@ class SmartRead extends Component {
   }
 }
 
-export default SmartRead;
+export default TestRead;
