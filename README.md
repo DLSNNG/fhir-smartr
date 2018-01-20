@@ -21,7 +21,7 @@ npm install --save fhir-smartr
   <script src="https://unpkg.com/react/umd/react.production.min.js"></script>
   <script src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"></script>
   <!-- Load fhir-smartr -->
-  <script type="text/javascript" src="https://unpkg.com/fhir-smartr@1.0.0/umd/fhir-smartr.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/fhir-smartr/umd/fhir-smartr.js"></script>
 </head>
 ```
 
