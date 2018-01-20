@@ -26,14 +26,14 @@ npm install --save fhir-smartr
 ```
 
 ## Usage
-### Define a resource component using react
+### Define a resource component with React
 ```javascript
 import { Component } from 'react' // var Component = React.Component; in browser
 
 class PatientResource extends Component {
   
   render() {
-    // The results of your Smart query will be passed as props.resource to this component
+    // FHIR resources will be passed in as props.resource
     const patient = this.props.resource;
     const name = patient.name[0];
     const address = patient.address[0];
@@ -61,9 +61,6 @@ class App extends Component {
       <SmartRead query={{ type: 'Patient', id: '0c458610-3570-4103-9263-ab84fbff6f0c'}}>
         <PatientResource />
       </SmartRead>
-      // Note: SmartRead and SmartSearch depend on FHIR.Oauth.Ready()
-      //       If you want to test against the open SMART DSTU Sandbox, 
-      //       use TestRead and TestSearch. These will use FHIR.Client() instead.
     )
   }
 }
@@ -89,15 +86,13 @@ class App extends Component {
           <PatientResource />
         </ResourceList>
       </SmartSearch>
-      // Note: SmartRead and SmartSearch depend on FHIR.Oauth.Ready()
-      //       If you want to test against the open SMART DSTU Sandbox, 
-      //       use TestRead and TestSearch. These will use FHIR.Client() instead.
     )
   }
 }
 
 ReactDOM.render(<App />, document.getElementById('root'));
 ```
+**_Note_**: SmartRead and SmartSearch depend on FHIR.Oauth.Ready(). If you want to test against the open SMART DSTU Sandbox, use TestRead and TestSearch. These will use FHIR.Client() instead.
 
 [build-badge]: https://img.shields.io/travis/user/repo/master.png?style=flat-square
 [build]: https://travis-ci.org/user/repo
