@@ -6,6 +6,7 @@
 
 # SMART on FHIR Components for React
 Example on Plunker: [https://plnkr.co/edit/O2NktwMJpeUuxyUp0a6E](https://plnkr.co/edit/O2NktwMJpeUuxyUp0a6E?p=preview)
+
 See also [fhir-smartr-redux](https://github.com/DLSNNG/fhir-smartr-redux) for modified implementation using Redux.
 
 ## Installation
