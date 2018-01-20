@@ -1,6 +1,6 @@
 {
   "name": "fhir-smartr",
-  "version": "1.0.33",
+  "version": "1.0.34",
   "description": "fhir-smartr React component",
   "main": "lib/index.js",
   "module": "es/index.js",
