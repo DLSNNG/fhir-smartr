@@ -21,8 +21,9 @@ class SmartRead extends Component {
       console.log("Oauth ready");
       console.log(smart);
       console.log(self);
-      self.setState({ ready: true, api: smart.api });
-      self.handleQuery(self.props);
+      const api = smart.api;
+      self.setState({ ready: true, api: api });
+      self.handleQuery(self.props, api);
     });
   }
   
@@ -30,7 +31,7 @@ class SmartRead extends Component {
     console.log("componentWillUpdate");
     if(this.props.query !== nextProps.query) {
       this.setState({ ready: false });  
-      this.handleQuery(nextProps);
+      this.handleQuery(nextProps, nextState.api);
     }
   }
   
@@ -41,12 +42,12 @@ class SmartRead extends Component {
     this.setState({ resource: resource, ready: true });
   }
   
-  handleQuery(props) {
+  handleQuery(props, api) {
     console.log("handleQuery");
     const query = props.query;
-    console.log(this.state);
+    console.log(api);
     if(query) {
-        this.state.api.read(query).done(this.updateResults);
+        api.read(query).done(this.updateResults);
     }
     else {
       this.setState({

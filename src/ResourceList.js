@@ -1,6 +1,7 @@
 /*global FHIR*/
 
 import React, { Component } from 'react';
+import ResourceListItem from './ResourceListItem';
 
 class ResourceList extends Component {
   
@@ -13,13 +14,7 @@ class ResourceList extends Component {
         {results.map((item) => {
           const resource = item.resource;
           return (
-            <li className={resource.resourceType + "-resource-item"} key={item.resource.id}>
-              {React.Children.map(children, child => {
-                  return React.cloneElement(child, {
-                    resource: resource
-                  })
-              })}
-            </li>
+            <ResourceListItem resource={resource} />
           )
         })}
       </ul>

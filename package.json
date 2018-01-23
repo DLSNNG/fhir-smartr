@@ -1,6 +1,6 @@
 {
   "name": "fhir-smartr",
-  "version": "1.0.36",
+  "version": "1.1.36",
   "description": "fhir-smartr React component",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -27,14 +27,15 @@
   "devDependencies": {
     "nwb": "0.21.x",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "react-test-renderer": "^16.2.0"
   },
   "author": "Nathan Ng",
   "homepage": "",
   "license": "MIT",
-  "repository" : {
-    "type" : "git", 
-    "url" : "https://github.com/DLSNNG/fhir-smartr"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DLSNNG/fhir-smartr"
   },
   "keywords": [
     "react-component"

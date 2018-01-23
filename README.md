@@ -14,6 +14,10 @@ See also [fhir-smartr-redux](https://github.com/DLSNNG/fhir-smartr-redux) for mo
 ```
 npm install --save fhir-smartr
 ```
+Make sure to include a reference to the SMART on FHIR js library in your <head> so we have access to the API.
+```html
+<script src="https://cdn.rawgit.com/smart-on-fhir/client-js/v0.1.8/dist/fhir-client.js"></script>
+```
 
 ### In the Browser (UMD)
 ```html

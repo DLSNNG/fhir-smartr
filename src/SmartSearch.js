@@ -22,15 +22,16 @@ class SmartSearch extends Component {
     // load SMART on FHIR library
     FHIR.oauth2.ready(function(smart) {
       console.log(smart);
-      self.setState({ ready: true, api: smart.api });
-      self.handleQuery(self.props);
+      const api = smart.api;
+      self.setState({ ready: true, api: api });
+      self.handleQuery(self.props, api);
     });
   }
   
   componentWillUpdate(nextProps, nextState) {
     if(this.props.query !== nextProps.query) {
       this.setState({ ready: false });  
-      this.handleQuery(nextProps);
+      this.handleQuery(nextProps, nextState.api);
     }
   }
   
@@ -40,10 +41,10 @@ class SmartSearch extends Component {
     this.setState({ results: newResults, ready: true });
   }
   
-  handleQuery(props) {
+  handleQuery(props, api) {
     const query = props.query;
     if(query) {
-        this.state.api.search(query).done(this.updateResults);
+        api.search(query).done(this.updateResults);
     }
     else {
       this.setState({
