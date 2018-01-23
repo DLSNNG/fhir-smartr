@@ -1,6 +1,6 @@
 # fhir-smartr
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)]
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/DLSNNG/fhir-smartr/blob/master/LICENSE)
 [![npm](https://img.shields.io/npm/v/npm.svg)](https://www.npmjs.com/package/fhir-smartr)
 
 # SMART on FHIR Components for React
