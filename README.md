@@ -1,8 +1,7 @@
 # fhir-smartr
 
-[![Travis][build-badge]][build]
-[![npm package][npm-badge]][npm]
-[![Coveralls][coveralls-badge]][coveralls]
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)]
+[![npm](https://img.shields.io/npm/v/npm.svg)](https://www.npmjs.com/package/fhir-smartr)
 
 # SMART on FHIR Components for React
 Example on Plunker: [https://plnkr.co/edit/YYdAIdKY2VW9UbF6GT0X](https://plnkr.co/edit/YYdAIdKY2VW9UbF6GT0X?p=preview)
